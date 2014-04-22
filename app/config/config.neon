@@ -23,7 +23,11 @@ nette:
 
 
 services:
+	- Learn\Security\Authenticator
+	- Learn\Security\Authorizator
+
 	- Learn\Model\AuthorRepository('author')
+	- Learn\Model\UserRepository('user')
 	- Learn\Model\BookRepository('book')
 
 	- Learn\RouterFactory
