@@ -20,7 +20,7 @@ abstract class BaseRepository extends Object
 	 * @param Context $context
 	 * @param string  $table
 	 */
-	public function __construct(Context $context, $table)
+	public function __construct($table, Context $context)
 	{
 		$this->context = $context;
 		$this->table = $table;

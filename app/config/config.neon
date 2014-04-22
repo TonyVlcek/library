@@ -23,7 +23,8 @@ nette:
 
 
 services:
-	- Learn\Model\AuthorRepository
+	- Learn\Model\AuthorRepository('author')
+	- Learn\Model\BookRepository('book')
 
 	- Learn\RouterFactory
 	router: @Learn\RouterFactory::createRouter

@@ -9,11 +9,6 @@ use Nette\Database\Context;
 
 class AuthorRepository extends BaseRepository
 {
-	public function __construct(Context $context)
-	{
-		parent::__construct($context, 'author');
-	}
-
 	public function getAllAuthors()
 	{
 		return $this->getTable()->order('name ASC');

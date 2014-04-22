@@ -1,0 +1,12 @@
+{block content}
+<h1>{$author->name}</h1>
+Is from {$author->nation}.
+<h3>Books</h3>
+{if !count($books)}
+	No books :(
+{/if}
+<ul>
+	{foreach $books as $book}
+		<li>{$book->name}</li>
+	{/foreach}
+</ul>

@@ -1,0 +1,4 @@
+{block content}
+<ul>
+	<li n:foreach="$authors as $author"><a n:href="Author:detail $author->id">{$author->name}</a></li>
+</ul>
