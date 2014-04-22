@@ -11,7 +11,8 @@ class Authorizator extends Permission
 {
 	public function __construct()
 	{
-		$this->addRole('member');
+		$this->addRole('guest');
+		$this->addRole('member', 'guest');
 		$this->addRole('admin', 'member');
 		$this->addRole('owner');
 

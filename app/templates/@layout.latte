@@ -15,19 +15,18 @@
 </head>
 
 <body>
+	<div n:foreach="$flashes as $flash" class="alert alert-{$flash->type}">
+		{$flash->message}
+	</div>
+
 	<ul>
 		<li n:if="!$user->isLoggedIn()"><a n:href="User:login">Login</a></li>
 		<li n:if="!$user->isLoggedIn()"><a n:href="User:register">Register</a></li>
 		<li n:if="$user->isLoggedIn()"><a n:href="logout!">Logout</a></li>
 		<li n:if="$user->isLoggedIn()">Logged in as {$user->identity->name}</li>
 		<li><a n:href="Author:default">Author list</a></li>
+		<li n:if="$user->isAllowed('author', 'edit')"><a n:href="Author:create">Create</a></li>
 	</ul>
-
-	<div n:foreach="$flashes as $flash" class="alert alert-{$flash->type}">
-		{$flash->message}
-	</div>
-
-
 
 	{include content}
 

@@ -1,0 +1,16 @@
+.alert {
+	padding: 10px;
+	cursor: pointer;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+.alert-danger {
+	background-color: red;
+	color: white;
+}
+
+.alert-success {
+	background-color: green;
+	color: white;
+}
